@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
- <input type="file" accept="image/*" capture="camera" id="liveView" class="camView">
 <style type="text/css">
 	body {
   font-family: helvetica, arial, sans-serif;
@@ -74,7 +73,7 @@ section {
       <p>Jangan anu yak</p>
       
       <div id="liveView" class="camView">
-        <button id="webcamButton">Hidupkan Camera</button>
+        <button id="webcamButton" accept="image/*" capture="camera">Hidupkan Camera</button>
         <video id="webcam" autoplay width="640" height="480"></video>
       </div>
     </section>
