@@ -41,7 +41,7 @@ section {
 .camView p {
   position: absolute;
   padding: 5px;
-  background-color: rgba(255, 111, 0, 0.85);
+  background-color: rgba(255, 1, 0, 0.85);
   color: #FFF;
   border: 1px dashed rgba(255, 255, 255, 0.7);
   z-index: 2;
@@ -166,9 +166,9 @@ function predictWebcam() {
       // If we are over 66% sure we are sure we classified it right, draw it!
       if (predictions[n].score > 0.66) {
         const p = document.createElement('p');
-        p.innerText = predictions[n].class  + ' - with ' 
+        p.innerText = predictions[n].class  + ' -  ' 
             + Math.round(parseFloat(predictions[n].score) * 100) 
-            + '% confidence.';
+            + '%.';
         p.style = 'margin-left: ' + predictions[n].bbox[0] + 'px; margin-top: '
             + (predictions[n].bbox[1] - 10) + 'px; width: ' 
             + (predictions[n].bbox[2] - 10) + 'px; top: 0; left: 0;';
